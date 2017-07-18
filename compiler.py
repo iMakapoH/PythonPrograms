@@ -4,7 +4,7 @@ import configparser, win32com.client
 config = configparser.ConfigParser()
 config_filename = 'settings.ini'
 
-if not os.path.exists(os.getcwd() + '\\' + config_filename):
+if not os.path.exists(os.path.join(os.getcwd(), config_filename)):
 	config['FOLDERS'] = { 'server_folder' : '', 'scripting_folder' : '' }
 	config['OTHER'] = { 'start_name' : '', 'auto_start' : '', 'auto_compiling' : '' }
 
